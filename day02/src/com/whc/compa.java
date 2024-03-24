@@ -10,6 +10,7 @@ public class compa {
 
   public static String code() {
     String str = "";
+    Random r = new Random();
     char[] charArr = new char[52];
     for (int i = 0; i < 52; i++) {
       if (i >= 26) {
@@ -23,12 +24,13 @@ public class compa {
     } */
     byte round = 4;
     for (int j = 0; j < round; j++) {
-      Random randIndex = new Random(charArr.length);
-      System.out.println(randIndex);
-      /* char randChar = charArr[randIndex];
-      str += randChar; */
+      int randIndex = r.nextInt(charArr.length);
+      // System.out.println(randIndex);
+      char randChar = charArr[randIndex];
+      str += randChar;
     }
-
+    int randNumber = r.nextInt(10);
+    str += randNumber;
     return str;
   }
 }
