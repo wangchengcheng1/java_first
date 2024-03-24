@@ -1,18 +1,34 @@
 package com.whc;
 
+import java.util.Random;
+
 public class compa {
 
   public static void main(String[] args) {
-    int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    int[] newArr = filterArrFn(arr, 3, 7);
-    for (int i = 0; i < newArr.length; i++) {
-      System.out.println(newArr[i]);
-    }
+    System.out.println(code());
   }
 
-  public static int[] filterArrFn(int[] arr, int from, int to) {
-    int[] filterArr = new int[to - from + 1];
+  public static String code() {
+    String str = "";
+    char[] charArr = new char[52];
+    for (int i = 0; i < 52; i++) {
+      if (i >= 26) {
+        charArr[i] = (char) (i + 97 - 26);
+      } else {
+        charArr[i] = (char) (i + 65);
+      }
+    }
+    /* for (int j = 0; j < charArr.length; j++) {
+      System.out.print(charArr[j] + " ");
+    } */
+    byte round = 4;
+    for (int j = 0; j < round; j++) {
+      Random randIndex = new Random(charArr.length);
+      System.out.println(randIndex);
+      /* char randChar = charArr[randIndex];
+      str += randChar; */
+    }
 
-    return filterArr;
+    return str;
   }
 }
