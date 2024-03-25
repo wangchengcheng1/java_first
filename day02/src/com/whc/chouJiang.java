@@ -26,6 +26,7 @@ public class chouJiang {
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] == item) {
         flag = true;
+        break;
       }
     }
     return flag;
