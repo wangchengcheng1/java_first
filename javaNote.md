@@ -546,3 +546,122 @@ int[][] arr2=new int[2][4];//第一个2表示这个二维数组里面有两个�
 int[][] arr3=new int[2][];//这个二维数组里面两个一维数组，里面的一维数组的值都是null，我们可以后期手动赋值  
 ```
 
+240506我开始学习使用ide eclipse
+
+20-12版本的[Eclipse IDE for Enterprise Java Developers](https://www.eclipse.org/downloads/packages/release/2020-12/r/eclipse-ide-enterprise-java-developers) eclipse可以创建javaweb工程。
+
+而[Eclipse IDE for Java Developers](https://www.eclipse.org/downloads/packages/release/2020-12/r/eclipse-ide-java-developers) 只能创建普通的javase工程。
+
+
+
+cmd控制台输入
+
+java -version
+
+查看JDK版本
+
+
+
+jre system library 这个文件夹是干嘛的
+
+`jre system library` 文件夹是 Java Runtime Environment (JRE) 系统库文件夹，用于存储 Java 运行时环境的相关文件。
+
+Java 是一种跨平台的编程语言，需要在运行 Java 程序之前安装 Java 运行时环境。JRE 是 Java 开发工具包 (JDK) 的一部分，它包含了 Java 程序运行所需的类库、运行时环境和其他必要的文件。
+
+在开发和运行 Java 程序时，IDE（集成开发环境）会将 `jre system library` 文件夹作为一个库引入项目中。这些库包含了 Java 标准类库和其他第三方库，使开发人员可以使用各种 Java 类和方法。
+
+`jre system library` 文件夹一般位于 JDK 的安装目录下，例如在 Windows 上的默认路径是 `C:\Program Files\Java\jdk1.x.x_xx\jre\lib`。这个文件夹是 Java 运行时环境的核心组成部分，它提供了 Java 程序执行所需的基本支持和功能。
+
+总之，`jre system library` 文件夹是 Java Runtime Environment (JRE) 的库文件夹，用于存储 Java 程序运行所需的类库和相关文件。
+
+
+
+快捷键 
+
+main  按住alt+/即可
+
+syso 也是这个快捷键 打印
+
+
+
+ ![](imgs\eclipse运行Java方法Snipaste_2024-05-06_20-25-32.jpg)
+
+会長、こんな感じかと思います。梁さんに確認してみてください。
+
+いま萩野さんが回答をくれましたので送りますね。
+親クラスから子クラスへの継承を適切に管理し、必要に応じて子クラスで新しい機能を追加したり、
+親クラスの機能を変更したりする必要があります。
+
+#### java中的抽象类
+
+public abstract void greet();
+
+https://www.bilibili.com/video/BV1a5411y77c?p=159&vd_source=664676b9653a8648ca2ab0249ee57e89
+
+视频地址 动力节点P159
+
+抽象类方法压根就没{}
+
+私
+
+抽象クラスが使われる場合：
+
+親クラスで機能を実現ためにはどのようにコードするのがわからないが、子クラスだけの中でこの機能を実現できるなら、抽象クラスが使われるべきです
+
+GPT3.5
+
+親クラスで機能を実現する方法がわからない場合、子クラスだけがその機能を実現できる場合、抽象クラスが必要です。
+
+
+
+親クラスで機能を実現する方法がわからない場合、子クラスだけでその機能を実現できる場合、抽象クラスが必要です。
+
+不看答案我来一
+
+正解を見ていないで初めて当ててみます
+
+親クラスで機能の実現する方法がわからないが、子クラスだけが
+
+#### super关键字 キーワード　予約語
+
+1. public: 「公開（こうかい）」
+2. private: 「非公開（ひこうかい）」
+3. protected: 「保護（ほご）」
+4. static: 「静的（せいてき）」
+5. final: 「最終（さいしゅう）」
+6. abstract: 「抽象（ちゅうしょう）」
+7. class: 「クラス」（クラス）
+8. interface: 「インターフェース」（インターフェース）
+9. extends: 「継承（けいしょう）」
+10. implements: 「実装（じっそう）」
+
+私
+
+もし親クラスから継承した変数を子クラスの変数に上書きしたあとで、親クラスの変数を使いたいなら、スーパーというキーワードを用いるのが必要です
+
+ｇｐｔ3.5
+
+もし子クラスが親クラスから継承した変数を上書きした後で、子クラスの変数ではなく親クラスの変数を使用したい場合、superというキーワードを使う必要があります。
+
+上書き
+
+[うわがき] [uwagaki] ◎ 
+
+【名・自他・サ变/三类】
+
+- 1.写在上面（的文字），覆盖；写收件人姓名，地址，。（書状や箱などの表面に文字を書くこと。また、その文字。特に、手紙の宛名。）
+- 2.计算机应用中的数据覆盖，替换。
+
+
+
+下書き
+
+ 
+
+[したがき] [shitagaki] ◎ 
+
+【名・他动词・サ变/三类】
+
+- 1.草稿，底稿，打稿，起草，起稿。
+- 2.画稿，打画稿。
+
