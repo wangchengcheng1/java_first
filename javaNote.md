@@ -665,3 +665,34 @@ GPT3.5
 - 1.草稿，底稿，打稿，起草，起稿。
 - 2.画稿，打画稿。
 
+#### equals
+
+该方法JDK重写了string的，但是没有重写其他类型，需要我们手动重新写
+
+for方法，只有list系列能用。setシリーズではfor方法が用いられません。
+
+拡張forループでは、アイテムを用いると、元の配列を変えることができません。
+
+
+
+#### hashMap
+
+```java
+HashMap<Student,String> hm=new HashMap<>();//一つ目のジェネリックはキー名、二つ目のジェネリックはキーバリュー。hmは適当な名です
+Set<Student>keys=hm.keySet();
+hm.put(s1,"江苏")//s1はStudentタイプのインスタンスである。キーと値のペアをhashMapのインスタンスの中で入れます。
+//s1はStudent型のインスタンスです。キーと値のペアをhashMapのインスタンスに格納します。    
+for(Student key:keys){
+    String value=hm.get(key)//キーによってバリューを手に入れられます
+}
+//注意するべきがあります。HashMapのキーの名が複雑なオブジェクトという形であることができます
+//注意すべき点があります。HashMapのキーは、複雑なオブジェクトの形をしている可能性があります。
+//EntryタイプはhashMap形のキーと値のペアタイプです
+for(Map.Entry<Student,String>entry:entries){//entry:entriesという書き方は拡張for文を変えられない文法です。
+//entry:entriesという書き方は拡張for文では変更できない構文です。
+    Student key=entry.getKey();
+    String value=entry.getValue();        
+}
+//ラムダループの中ではキーのタイプとバリューのタイプが省略できます lambda loop
+```
+
