@@ -1398,11 +1398,24 @@ https://www.bilibili.com/video/BV1yW4y1Y7Ms?p=34&vd_source=664676b9653a8648ca2ab
 P34集
 
 ```java
-Map.Entry[] arr=new Map.Entry[0];//这里的0可以写1,2,20什么数字都可以。比较集合长度和数组长度。もし集合のほうがもっと大きいなら、新しい配列は集合の同じの大きさに参照して立てます。
-Map.Entry[] arr2=entries.toArray(arr);
+//获得所有键值对对象，就是entry对象。目标：entries变成数组当成可变因数。
+Set<Map.Entry<String,String>> entries=hm.entrySet();
+Map.Entry[] arr=new Map.Entry[0];//这里的0可以写1,2,20什么数字都可以。比较集合长度和数组长度。
+Map.Entry[] arr2=entries.toArray(arr);//もし集合のほうがもっと大きいなら、新しい配列は集合の同じの大きさに参照して立てられます。集合entries，数组arr2。大白话就是这一步骤会动态根据entries长度和arr长度动态的调整合适的给到arr2长度。
 //不可变的集合
-Map map=Map.ofEntries(arr2);
+Map map=Map.ofEntries(arr2);//这个方法形参就是可变参数，可变因数本质就是数组。
 map.put("111");//报错
+
+/*在提供的代码中，Map.Entry[] arr = new Map.Entry[0]; 这行代码的作用是创建一个空的 Map.Entry[] 数组对象。这个数组被用作 entries.toArray() 方法的参数，以便将 Set<Map.Entry<String, String>> entries 中的元素转换为数组形式。
+
+在这个特定的情况下，由于数组长度为0，创建的数组实际上是一个空数组，不包含任何元素。然后，通过调用 entries.toArray(arr) 方法，将 entries 集合中的元素复制到这个空数组中。这样做的目的是将 entries 集合转换为数组形式，并将其赋值给 arr2 变量。
+
+通过这个过程，可以将 entries 集合中的 Map.Entry 对象以数组的形式存储在 arr2 变量中，方便后续的操作和传递。需要注意的是，由于 arr 的长度为0，如果 entries 集合的大小大于0，那么 arr2 数组将根据 entries 集合的大小进行动态调整，以适应更多的元素。
+
+最后，使用 Map.ofEntries(arr2) 方法将 arr2 数组转换为一个不可变的 Map 对象。这个方法的参数是可变参数，可以接受一个数组作为输入。由于 arr2 是一个 Map.Entry[] 数组，它可以作为可变参数传递给 Map.ofEntries() 方法，从而创建一个不可变的 Map 对象。
+
+需要注意的是，由于不可变的 Map 对象无法修改，因此在尝试向其中添加新的键值对时会导致错误。在提供的代码中，map.put("111") 将会报错，因为 map 是一个不可变的 Map 对象。
+*/
 ```
 
 
